@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hyojin's portfolio: grid </title>
+        <style>
+            .grid-container{
+                display: grid;
+                height: 100vh;
+                width: 100vw;
+                grid-template-columns: 1fr 4fr 1fr; 
+                grid-template-rows: 1fr 4fr 1fr;
+                grid-gap: 5px;
+                grid-template-areas: 
+                    "header header header"
+                    "left-sidebar main right-sidebar"
+                    "footer footer footer";
+            }
+
+            .flex-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .header-text{
+                width:auto;
+                height:auto;
+            }
+
+            .grid-color{
+                background-color: pink;
+            }
+
+            .border{
+                border: 1px solid gray;
+            }
+
+            .grid-header{
+                grid-area: header;
+            }
+
+            .grid-footer{
+                grid-area: footer;
+            }
+
+            .grid-left-sidebar{
+                grid-area: left-sidebar;
+            }
+
+            .grid-right-sidebar{
+                grid-area: right-sidebar;
+            }
+
+            .grid-main{
+                grid-area: main;
+            }
+
+            .box{
+                width: 60px;
+                height: 60px;
+                background-color: green;
+                justify-content: center;
+                transition-duration: 0.5s;
+            }
+
+            .box:hover{
+                background-color: yellowgreen;
+                width: 120px;
+                height: 120px;
+                transition-duration: 0.5s;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="grid-container">
+            <div class="grid-header grid-color border flex-container">
+                <div class="header-text"><h1>Hyojin Kwak</h1></div>
+            </div>
+            
+            <div class="grid-left-sidebar grid-color border"></div>
+            <div class="grid-right-sidebar grid-color border"></div>
+            <div class="grid-main grid-color border flex-container">
+                <div class="box"></div>
+            </div>
+                
+            <div class="grid-footer grid-color border"></div>
+        </div>
+    </body>
+
+</html>
