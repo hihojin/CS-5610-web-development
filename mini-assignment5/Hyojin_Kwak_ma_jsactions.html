@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hyojin's javascript action</title>
+
+    <style>
+      #box {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+      }
+
+      #warning {
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="box"></div>
+    <input type="text" id="input-value" />
+    <button id="button-color">Change color</button>
+    <div id="warning"></div>
+
+    <script>
+      document
+        .getElementById('button-color')
+        .addEventListener('click', colorChange);
+
+      function deleteWarning() {
+        document.getElementById('warning').innerHTML = '';
+      }
+
+      function colorChange() {
+        const color = document
+          .getElementById('input-value')
+          .value.toLowerCase();
+
+        switch (color) {
+          case 'red':
+            document.getElementById('box').style.backgroundColor = 'red';
+            deleteWarning();
+            break;
+          case 'blue':
+            document.getElementById('box').style.backgroundColor = 'blue';
+            deleteWarning();
+            break;
+          case 'green':
+            document.getElementById('box').style.backgroundColor = 'green';
+            deleteWarning();
+            break;
+          default:
+            document.getElementById('box').style.backgroundColor = 'white';
+            document.getElementById(
+              'warning'
+            ).innerHTML = 'Not a valid color. Please choose green, red, or blue.';
+        }
+      }
+    </script>
+  </body>
+</html>
