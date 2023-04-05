@@ -9,4 +9,4 @@ mini assignment 4: practicing of Javasciript- solved mini problems and ran with 
 
 mini assignment 5: Created a simple website that gets user input: color and changes the color of the box using Javascript - with DOM. 
 
-mini assignment 7: RESTful api http requests in Nodejs.
+mini assignment 7: RESTful api http requests in Nodejs.(CRUD operations-- get/post/put/delete)
